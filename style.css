@@ -1,0 +1,181 @@
+ #base {
+    /* margin-left: 10%;
+    margin-top: 10px; */
+    /* display: flex;
+    justify-content: center; */
+    margin-top: 3%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 30px;
+
+}
+
+
+#puzzle {
+    padding-right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #505050;
+}
+
+/* [data-theme="dark"] #puzzle{
+    color: white;
+} */
+
+
+#titulo {
+    font-weight: bolder;
+    font-size: 30px;
+    color: rgb(80, 80, 80);
+
+}
+
+/* [data-theme="dark"] #titulo{
+    color: white;
+} */
+
+.accordion-button {
+    background-color: #3ce4cb !important;
+    --bs-accordion-active-bg: #3ce4cb;
+    --bs-accordion-btn-icon-bg: var(--white);
+}
+
+.accordion-button::after {
+    color: white;
+}
+
+/* [data-theme="dark"] .accordion-button::after{
+    color: white;
+} */
+
+
+/* [data-theme="dark"] .accordion-button{
+    background-color: var(--RoxoEscuroImportante);
+} */
+
+/* começo da questão */
+
+#pergunta-principal {
+    /* margin-top: 30px; */
+    color: rgb(80, 80, 80);
+    border-radius: 10px;
+    display: flex;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+/* botão com respostas */
+
+#botao-resposta {
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: #3ce4cb;
+    font-weight: bold;
+    font-size: 15px;
+    color: rgb(80, 80, 80);
+    padding: 10px 20px;
+    border-radius: 20px;
+
+}
+
+/* [data-theme="dark"] #botao-resposta{
+    background-color: var(--RoxoEscuroImportante);
+    color: white;
+   
+} */
+
+#grupo-botao {
+    display: grid;
+    justify-content: center;
+}
+
+#botao-resposta:hover {
+    background-color: #33beaa;
+
+}
+
+/* [data-theme="dark"] #botao-resposta:hover{
+    background-color: #49158d;
+} */
+
+
+#titulo:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+.accordion-body {
+    background-color: rgb(196, 255, 252);
+    border-top: none;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    justify-content: center;
+    padding-left: 30px;
+    margin-left: 5px;
+    border: none;
+}
+
+/* [data-theme="dark"] .accordion-body{
+    background-color: var(--RoxoClaroImportante);
+} */
+
+
+
+
+
+
+
+
+
+
+.Jogo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 20px;
+}
+
+li {
+    list-style: none;
+}
+
+.column-A li {
+    list-style: none;
+    cursor: pointer;
+
+    display: flex;
+    flex-wrap: nowrap;
+    /* Adiciona cursor de arraste para elementos arrastáveis */
+
+   
+}
+
+.column-B li {
+    list-style: none;
+    border: 1px solid #000;
+   
+    padding: 5px;
+    margin: 5px;
+    min-width:40px;
+    text-align: center;
+}
+
+#item-B {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: start;
+}
+#item-A{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: start;
+}
+
+
+
+
