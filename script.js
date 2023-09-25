@@ -1,4 +1,4 @@
- const draggables = document.querySelectorAll('.column-A li');
+        const draggables = document.querySelectorAll('.column-A li');
         const dropzones = document.querySelectorAll('.column-B .dropzone');
 
         let draggedItem = null;
