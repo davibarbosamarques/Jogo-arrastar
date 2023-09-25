@@ -1,10 +1,16 @@
-const draggables = document.querySelectorAll('.column-A li');
+ const draggables = document.querySelectorAll('.column-A li');
         const dropzones = document.querySelectorAll('.column-B .dropzone');
 
         let draggedItem = null;
 
         draggables.forEach(draggable => {
             draggable.addEventListener('dragstart', (e) => {
+                draggedItem = draggable;
+                e.dataTransfer.setData('text/plain', draggable.textContent);
+            });
+
+            // Adicione eventos de toque para dispositivos móveis
+            draggable.addEventListener('touchstart', (e) => {
                 draggedItem = draggable;
                 e.dataTransfer.setData('text/plain', draggable.textContent);
             });
@@ -17,20 +23,37 @@ const draggables = document.querySelectorAll('.column-A li');
 
             dropzone.addEventListener('drop', (e) => {
                 e.preventDefault();
-                if (!draggedItem) return; // Evita soltar em uma zona não permitida
+                if (!draggedItem) return;
 
                 const draggedText = draggedItem.textContent;
-                dropzone.textContent = draggedText; // Define o texto da dropzone com o texto arrastado
+                dropzone.textContent = draggedText;
 
                 const respostaCorreta = dropzone.getAttribute('data-resposta').trim();
 
                 if (respostaCorreta === draggedText) {
-                    dropzone.style.backgroundColor = '#3CB371'; // Resposta correta, fundo verde
+                    dropzone.style.backgroundColor = '#3CB371'; //Resposta certa fica verde
                 } else {
-                    dropzone.style.backgroundColor = '#FA8072'; // Resposta incorreta, fundo vermelho
+                    dropzone.style.backgroundColor = '#FA8072'; //Resposta errada fica vermelho
                 }
 
-                // Reseta o item arrastado
                 draggedItem = null;
+            });
+
+            // Adicione eventos de toque para dispositivos móveis
+            dropzone.addEventListener('touchstart', (e) => {
+                if (!draggedItem) return;
+                const draggedText = draggedItem.textContent;
+                dropzone.textContent = draggedText;
+
+                const respostaCorreta = dropzone.getAttribute('data-resposta').trim();
+
+                if (respostaCorreta === draggedText) {
+                    dropzone.style.backgroundColor = '#3CB371'; //Resposta certa fica verde
+                } else {
+                    dropzone.style.backgroundColor = '#FA8072'; //Resposta errada fica vermelho
+                }
+
+                draggedItem = null;
+                e.preventDefault();
             });
         });
