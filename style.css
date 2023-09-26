@@ -135,7 +135,7 @@
 
 .Jogo {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     font-size: 20px;
 }
@@ -158,11 +158,12 @@ li {
 .column-B li {
     list-style: none;
     border: 1px solid #000;
-   
+    border-radius: 50%;
     padding: 5px;
     margin: 5px;
     min-width:40px;
     text-align: center;
+    
 }
 
 #item-B {
