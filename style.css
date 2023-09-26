@@ -135,7 +135,7 @@
 
 .Jogo {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-around;
     font-size: 20px;
 }
