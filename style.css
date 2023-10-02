@@ -27,6 +27,8 @@ body {
 }
 
 .column-A li {
+  margin-left: 0.4rem;
+  margin-right: 0.4rem;
   list-style: none;
   cursor: pointer;
 
@@ -36,13 +38,17 @@ body {
   
   list-style: none;
 
-  
+  background-color:#5f666d ;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  min-width: 2.5rem;
+  min-height: 2.2rem;
 }
 
 .column-B li {
   list-style: none;
   border: 1px solid #000;
-  border-radius: 47%;
   padding: 5px;
   margin: 5px;
   min-width:40px;
@@ -58,6 +64,11 @@ body {
 
   padding-top: 5px;
   padding-bottom: 5px;
+
+  
+}
+#item-B li{
+  color: white;
 }
 #item-A{
   display: flex;
@@ -74,7 +85,10 @@ body {
   background-color: #26a737;
   color: white;
 }
-
+#btn-voltar{
+  background-color: #26a737;
+  color: white;
+}
 #puzzle{
   margin-right: 8px;
 }
