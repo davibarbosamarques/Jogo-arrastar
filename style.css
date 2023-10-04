@@ -70,9 +70,7 @@ body {
 }
 #item-B li{
   color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
 }
 #item-A{
   display: flex;
