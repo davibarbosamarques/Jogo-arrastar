@@ -74,6 +74,9 @@ body {
   align-items: center;
   justify-content: center;
 }
+#item-B li:hover{
+  color: black;
+}
 #item-A{
   display: flex;
   flex-wrap: nowrap;
