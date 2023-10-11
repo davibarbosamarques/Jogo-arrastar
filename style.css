@@ -45,7 +45,9 @@ body {
   min-width: 2.5rem;
   min-height: 2.5rem;
 }
-
+.column-A li:hover{
+  color: black;
+}
 .column-B li {
   list-style: none;
   border: 1px solid #000;
@@ -74,9 +76,7 @@ body {
   align-items: center;
   justify-content: center;
 }
-#item-B li:hover{
-  color: black;
-}
+
 #item-A{
   display: flex;
   flex-wrap: nowrap;
