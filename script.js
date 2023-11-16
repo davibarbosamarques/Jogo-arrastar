@@ -1,9 +1,9 @@
-        const draggables = document.querySelectorAll('.column-A li');
-        const dropzones = document.querySelectorAll('.column-B .dropzone');
+        const arrastavel = document.querySelectorAll('.column-A li');
+        const chegada = document.querySelectorAll('.column-B .dropzone');
 
         let draggedItem = null;
 
-        draggables.forEach(draggable => {
+        arrastavel.forEach(draggable => {
             draggable.addEventListener('dragstart', (e) => {
                 draggedItem = draggable;
                 e.dataTransfer.setData('text/plain', draggable.textContent);
@@ -16,7 +16,7 @@
             });
         });
 
-        dropzones.forEach(dropzone => {
+        chegada.forEach(dropzone => {
             dropzone.addEventListener('dragover', (e) => {
                 e.preventDefault();
             });
