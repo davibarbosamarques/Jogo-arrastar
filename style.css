@@ -8,13 +8,14 @@
   font-family: 'Poppins', sans-serif;
 }
 
-body {
+.botao {
   display: flex;
   padding: 0 10px;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  background: #5372F0;
+  /* min-height: 100vh; */
+  background-color: #5372F0;
+  border: 5px solid black;
 }
 /* CORPO DO JOGO */
 .Jogo {
@@ -45,8 +46,9 @@ body {
   min-width: 2.5rem;
   min-height: 2.5rem;
 }
-.column-A li:hover{
-  color: black;
+.column-A li:hover {
+  transform: scale(1.1);
+  /* color: black; */
 }
 .column-B li {
   list-style: none;
