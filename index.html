@@ -23,128 +23,106 @@
 </head>
 
 <body>
+  <div class="row d-flex align-items-center">
+    <div class="col-md-6 d-flex justify-content-center">
+      <img src="imgs/img-game.png" alt="" class="w-50">
+    </div>
+    <div class="col-md-6 right">
+      <div class="mensagem">
+        <p>Bem-vindo(a), <br>
 
-<!-- MODAL 1 - INSTRÇÕES DO JOGO -->
+          Aproveite esta oportunidade para mergulhar em um desafio interativo. Descubra novas perspectivas enquanto se
+          diverte explorando nosso jogo. Vamos lá!</p>
+      </div>
+
+      <button class="btn" data-bs-target="#exampleModalToggle" id="btn-game" data-bs-toggle="modal"><i
+          class="fa-solid fa-puzzle-piece" id="puzzle"></i>CLIQUE E TESTE SEUS
+        CONHECIMENTOS</i></button>
+    </div>
+  </div>
+
+
+  <!-- MODAL 1 - INSTRÇÕES DO JOGO -->
   <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
     tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-3" id="exampleModalToggleLabel"><i class="fa-solid fa-pen-clip"></i> Instruções do Teste</h1>
+          <h1 class="modal-title fs-3" id="exampleModalToggleLabel"><i class="fa-solid fa-pen-clip"></i> Instruções do
+            Teste</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body fw-medium">
-         <ol id="instrucoes">
-          <li>Esse será um jogo para relacionar duas colunas</li>
-          <li>Para computador arraste SOMENTE a letra do item até o espaço vazio<br>
+          <ol id="instrucoes">
+            <li>Esse será um jogo para relacionar duas colunas</li>
+            <li>Para computador arraste SOMENTE a letra do item até o espaço vazio<br>
               Para celular toque SOMENTE na letra do item e depois no espaço vazio
-          </li>
-          <li>Se for colocado duas letras no mesmo espaço será considerada a última letra colocada</li>
-          <li>Se a resposta estiver correta ficara verde</li>
-          <li>Este teste não influenciará na avaliação final.</li>
-         </ol>
+            </li>
+            <li>Se for colocado duas letras no mesmo espaço será considerada a última letra colocada</li>
+            <li>Se a resposta estiver correta ficara verde</li>
+            <li>Este teste não influenciará na avaliação final.</li>
+          </ol>
         </div>
         <div class="modal-footer d-flex justify-content-center">
-          <button class="btn" id="btn-game" data-bs-target="#exampleModalToggle2"
+          <button class="btn" id="btn-continuar" data-bs-target="#exampleModalToggle2"
             data-bs-toggle="modal">Continuar</button>
         </div>
       </div>
     </div>
   </div>
 
-<!-- MODAL 2 - INÍCIO DO JOGO -->
+  <!-- MODAL 2 - INÍCIO DO JOGO -->
   <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
     tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-3" id="exampleModalToggleLabel2"><i class="fa-solid fa-gamepad"></i> Relacione as colunas</h1>
+          <h1 class="modal-title fs-3" id="exampleModalToggleLabel2"><i class="fa-solid fa-gamepad"></i> Relacione as
+            colunas</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
 
         <div class="Jogo">
           <ul class="column-A">
-              <div id="item-A">
-                  <li draggable="true">A</li>Maçã
-              </div>
-              <div id="item-A">
-                  <li draggable="true">B</li>Banana
-              </div>
-              <div id="item-A">
-                  <li draggable="true">C</li>Laranja
-              </div>
+            <div id="item-A">
+              <li draggable="true">A</li>JavaScript
+            </div>
+            <div id="item-A">
+              <li draggable="true">B</li>HTML
+            </div>
+            <div id="item-A">
+              <li draggable="true">C</li>CSS
+            </div>
           </ul>
           <ul class="column-B">
-              <div id="item-B">
-                  <p>
-                      <li class="dropzone" data-resposta="B"></li>fruto da bananeira.
-                  </p>
-              </div>
-              <div id="item-B">
-                  <p>
-                      <li class="dropzone" data-resposta="C"></li>é uma fruta cítrica com sabor
-                      variando
-                      do doce para o levemente azedo.
-                  </p>
-              </div>
-              <div id="item-B">
-                  <p>
-                      <li class="dropzone" data-resposta="A"></li>O fruto comestível da macieira,
-                      redondo, um pouco
-                      achatado, com casca fina de cor verde ou vermelha com estrias amarelas e sabor doce
-                      ou ácido.
-                  </p>
-              </div>
+            <div id="item-B">
+              <p>
+                <li class="dropzone" data-resposta="B"></li>É a linguagem de marcação usada para estruturar e organizar o conteúdo de uma página da web, definindo elementos como textos, imagens, links e vídeos.
+              </p>
+            </div>
+            <div id="item-B">
+              <p>
+                <li class="dropzone" data-resposta="C"></li> É uma linguagem que permite a definição de estilos visuais, como cores, fontes, layout e animações, para tornar as páginas da web mais atraentes.
+              </p>
+            </div>
+            <div id="item-B">
+              <p>
+                <li class="dropzone" data-resposta="A"></li>É uma linguagem de programação que permite adicionar interatividade e dinamismo às páginas da web. Com ela, é possível criar funcionalidades como validação de formulários, efeitos visuais, manipulação de elementos da página e etc.
+              </p>
+            </div>
           </ul>
-      </div>
+        </div>
 
         <div class="modal-footer d-flex justify-content-center">
-        <button class="btn" id="btn-voltar" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Voltar</button>
-      </div>
-      </div>
-    </div>
-  </div>
-  </div>
-  </div>
-  <button class="btn d-flex align-items-center justify-content-evenly" data-bs-target="#exampleModalToggle" id="btn-game" data-bs-toggle="modal"><i class="fa-solid fa-puzzle-piece" id="puzzle"></i>Teste Seus
-    Conhecimentos</i></button>
-
-  <!-- Info Box -->
-  <!-- <div class="info_box">
-          <div class="info-title"><span>Some Rules of this Quiz</span></div>
-          <div class="info-list">
-              <div class="info">1. You will have only <span>15 seconds</span> per each question.</div>
-              <div class="info">2. Once you select your answer, it can't be undone.</div>
-              <div class="info">3. You can't select any option once time goes off.</div>
-              <div class="info">4. You can't exit from the Quiz while you're playing.</div>
-              <div class="info">5. You'll get points on the basis of your correct answers.</div>
-          </div>
-          <div class="buttons">
-              <button class="quit">Exit Quiz</button>
-              <button class="restart">Continue</button>
-          </div>
-      </div> -->
-
-  <!-- BOTÃO PARA INICAR O JOGO -->
-  <!-- <button type="button" class="btn btn-primary" id="inicio" onclick="start()">Teste seus conhecimentos</button> -->
-  <!-- <div id="inicio" onclick="start()"><button>Iniciar Jogo</button></div> -->
-
-  <!-- <div class="contain">
-    <div id="close"><i class="fa-solid fa-x"></i></div> -->
-  <!-- <div id="question"><i class="fa-regular fa-circle-question"></i></div> -->
-  <!-- <h2>Palavra Embaralhada</h2>
-    <div class="content">
-      <p class="word"></p>
-      <div class="details">
-        <p class="hint">Dica: <span></span></p>
-      </div>
-      <input type="text" spellcheck="false" placeholder="Escreva a palavra">
-      <div class="buttons">
-        <button class="refresh-word">Embaralhar</button>
-        <button class="check-word" id="imagem">Confirmar</button>
+          <button class="btn" id="btn-voltar" data-bs-target="#exampleModalToggle"
+            data-bs-toggle="modal">Voltar</button>
+            <button class="btn" id="btn-concluido" data-bs-dismiss="modal" aria-label="Close">Concluído</button>
+        </div>
       </div>
     </div>
-  </div> -->
+  </div>
+  </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
